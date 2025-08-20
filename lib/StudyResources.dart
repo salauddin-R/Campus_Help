@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'Style/Style.dart';
+
 class StudyResources extends StatelessWidget
 {
   const StudyResources({super.key});
@@ -10,7 +12,7 @@ class StudyResources extends StatelessWidget
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("CampusBond",style: TextStyle(color:
+        title: Text("STUDY RESOURCES",style: TextStyle(color:
         Colors.black,fontWeight: FontWeight.w900,fontSize: 32),),
         actions: [
           Icon(Icons.settings,size: 32,)
@@ -26,7 +28,7 @@ class StudyResources extends StatelessWidget
                 height: 50,
                 width: 370,
                 decoration: BoxDecoration(
-                  color: Color(0xFF00695C),
+                  color: colorgreen,
                   borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)),
                 ),
 
@@ -43,7 +45,7 @@ class StudyResources extends StatelessWidget
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20),bottomRight: Radius.circular(20)),
                     border: Border.all(
-                        color: Color(0xFF00695C),
+                        color: colorgreen,
                         width: 2
                     )
                 ),
@@ -55,7 +57,7 @@ class StudyResources extends StatelessWidget
                     SizedBox(height:6,),
                     ElevatedButton(onPressed: (){},
                       style:ElevatedButton.styleFrom(
-                          backgroundColor:Color(0xFFCDDC39),minimumSize: Size(250, 40)
+                          backgroundColor:colorLime,minimumSize: Size(250, 40)
                       ) ,
                       child:Text("CSE",style: TextStyle(
                           fontSize:25,fontWeight: FontWeight.w900,color: Colors.black
@@ -63,7 +65,7 @@ class StudyResources extends StatelessWidget
                     SizedBox(height:10,),
                     ElevatedButton(onPressed: (){},
                       style:ElevatedButton.styleFrom(
-                          backgroundColor:Color(0xFFCDDC39),minimumSize: Size(250, 40)
+                          backgroundColor:colorLime,minimumSize: Size(250, 40)
                       ) ,
                       child:Text("EEE",style: TextStyle(
                           fontSize:25,fontWeight: FontWeight.w900,color: Colors.black
@@ -71,7 +73,7 @@ class StudyResources extends StatelessWidget
                     SizedBox(height:10,),
                     ElevatedButton(onPressed: (){},
                       style:ElevatedButton.styleFrom(
-                          backgroundColor:Color(0xFFCDDC39),minimumSize: Size(250, 40)
+                          backgroundColor:colorLime,minimumSize: Size(250, 40)
                       ) ,
                       child:Text("Textile",style: TextStyle(
                           fontSize:25,fontWeight: FontWeight.w900,color: Colors.black
@@ -79,7 +81,7 @@ class StudyResources extends StatelessWidget
                     SizedBox(height:10,),
                     ElevatedButton(onPressed: (){},
                       style:ElevatedButton.styleFrom(
-                          backgroundColor:Color(0xFFCDDC39),minimumSize: Size(250, 40)
+                          backgroundColor:colorLime,minimumSize: Size(250, 40)
                       ) ,
                       child:Text("BBA",style: TextStyle(
                           fontSize:25,fontWeight: FontWeight.w900,color: Colors.black
@@ -87,7 +89,7 @@ class StudyResources extends StatelessWidget
                     SizedBox(height:10,),
                     ElevatedButton(onPressed: (){},
                       style:ElevatedButton.styleFrom(
-                          backgroundColor:Color(0xFFCDDC39),minimumSize: Size(250, 40)
+                          backgroundColor:colorLime,minimumSize: Size(250, 40)
                       ) ,
                       child:Text("English",style: TextStyle(
                           fontSize:25,fontWeight: FontWeight.w900,color: Colors.black
@@ -95,7 +97,7 @@ class StudyResources extends StatelessWidget
                     SizedBox(height:10,),
                     ElevatedButton(onPressed: (){},
                       style:ElevatedButton.styleFrom(
-                          backgroundColor:Color(0xFFCDDC39),minimumSize: Size(250, 40)
+                          backgroundColor:colorLime,minimumSize: Size(250, 40)
                       ) ,
                       child:Text("Bangla",style: TextStyle(
                           fontSize:25,fontWeight: FontWeight.w900,color: Colors.black
@@ -124,7 +126,7 @@ class StudyResources extends StatelessWidget
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20),bottomRight: Radius.circular(20)),
                     border: Border.all(
-                        color: Color(0xFF00695C),
+                        color: colorgreen,
                         width: 2
                     )
                 ),
@@ -148,7 +150,7 @@ class StudyResources extends StatelessWidget
                           Icon(Icons.message, color: Colors.black),
                           SizedBox(width: 8),
                           Text(
-                            "  Md Fahim Muntasir(cse)",
+                            "  Md Fahim Muntasir(CSE)",
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w900,
@@ -176,36 +178,7 @@ class StudyResources extends StatelessWidget
                           Icon(Icons.message, color: Colors.black),
                           SizedBox(width: 8),
                           Text(
-                            "  Md Murad Hossen(cse)",
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w900,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-
-
-                    SizedBox(
-                      height: 7,
-                    ),
-
-                    ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.orangeAccent,
-                        minimumSize: Size(250, 40),
-                      ),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.message, color: Colors.black),
-                          SizedBox(width: 8),
-                          Text(
-                            "  Md Sakib Hosen(cse)",
+                            "  Md Murad Hossen(EEE)",
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w900,
@@ -234,7 +207,36 @@ class StudyResources extends StatelessWidget
                           Icon(Icons.message, color: Colors.black),
                           SizedBox(width: 8),
                           Text(
-                            "  Mohammad Ali(cse)",
+                            "  Md Sakib Hosen(BBA)",
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w900,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+
+
+                    SizedBox(
+                      height: 7,
+                    ),
+
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.orangeAccent,
+                        minimumSize: Size(250, 40),
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.message, color: Colors.black),
+                          SizedBox(width: 8),
+                          Text(
+                            "  Mohammad Ali(ELL)",
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w900,
@@ -259,9 +261,9 @@ class StudyResources extends StatelessWidget
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 1,
         type: BottomNavigationBarType.fixed,
-        backgroundColor:Colors.amber,
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.black,
+        backgroundColor:colorgreen,
+        selectedItemColor:colorCyan,
+        unselectedItemColor:colorWhite,
         items:[
           BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.safety_check),label: "Safety"),

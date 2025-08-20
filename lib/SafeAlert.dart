@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Style/Style.dart';
 import 'main.dart';
 
 class SafeAlert extends StatelessWidget
@@ -11,7 +12,7 @@ class SafeAlert extends StatelessWidget
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("CampusBond",style: TextStyle(color:
+          title: Text("CAMPUS ALERT",style: TextStyle(color:
           Colors.black,fontWeight: FontWeight.w900,fontSize: 32),),
           actions: [
             Icon(Icons.settings,size: 32,)
@@ -27,7 +28,7 @@ class SafeAlert extends StatelessWidget
                   height: 200,
                   width: 370,
                   decoration: BoxDecoration(
-                    color: Color(0xFF00695C),
+                    color: colorgreen,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Column(
@@ -41,33 +42,29 @@ class SafeAlert extends StatelessWidget
                       Colors.white,fontWeight: FontWeight.w500,fontSize: 16),),
                       SizedBox(height: 8,),
                       ElevatedButton(onPressed: (){},
-                        style: ElevatedButton.styleFrom(backgroundColor: Color(0xFFCDDC39)) ,
+                        style: ElevatedButton.styleFrom(backgroundColor: colorLime) ,
                         child:Text("Active SafeAlert",style: TextStyle(color:
                         Colors.black,fontWeight: FontWeight.w500,fontSize:22),),
                       )
                     ],
                   ),
                 ),
-                SizedBox(height: 20,),
+                SizedBox(height: 50,),
                 Text("Nearest Thana",style: TextStyle(color:
                 Colors.black,fontWeight: FontWeight.w900,fontSize:26),),
                 SizedBox(height: 7,),
                 Container(
                   height: 70,
                   width: 350,
-                  color: Colors.amber,
+                  color: colorgreen,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Icon(Icons.location_on,size: 37,),
                       Column(
                         children: [
-                          Text("Airport Police Station",style: TextStyle(
-                              fontSize:22,fontWeight: FontWeight.w900
-                          ),),
-                          Text("Contact:09134909408",style: TextStyle(
-                              fontSize:22,fontWeight: FontWeight.w900
-                          ),),
+                          Text("Airport Police Station",style:textStyle(colorWhite,weight9,22.0)),
+                          Text("Contact:09134909408",style:textStyle(colorWhite,weight9,22.0)),
                         ],
                       ),
                       Icon(Icons.call_made_outlined,size: 37,)
@@ -78,26 +75,41 @@ class SafeAlert extends StatelessWidget
                 Container(
                   height: 70,
                   width: 350,
-                  color: Colors.amber,
+                  color: colorgreen,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Icon(Icons.location_on,size: 37,),
                       Column(
                         children: [
-                          Text("Dakshinkhan Police Station",style: TextStyle(
-                              fontSize:20,fontWeight: FontWeight.w900
-                          ),),
-                          Text("Contact:09134909408",style: TextStyle(
-                              fontSize:22,fontWeight: FontWeight.w900
-                          ),),
+                          Text("Dakshinkhan Police Station",style:textStyle(colorWhite,weight9,21.0)),
+                          Text("Contact:09134909408",style:textStyle(colorWhite,weight9,22.0)),
                         ],
                       ),
                       Icon(Icons.call_made_outlined,size: 37,)
                     ],
                   ),
                 ),
-                SizedBox(height:95,),
+                SizedBox(height:50,),
+                Container(
+                  height: 70,
+                  width: 350,
+                  color: colorgreen,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Icon(Icons.location_on,size: 37,),
+                      Column(
+                        children: [
+                          Text("Campus Security",style:textStyle(colorWhite,weight9,21.0)),
+                          Text("Contact:09134909408",style:textStyle(colorWhite,weight9,22.0)),
+                        ],
+                      ),
+                      Icon(Icons.call_made_outlined,size: 37,)
+                    ],
+                  ),
+                ),
+                SizedBox(height:30,),
                 ElevatedButton(onPressed: (){
                   Navigator.pushNamed(context, '/ComplainBox');
                 },
@@ -108,7 +120,7 @@ class SafeAlert extends StatelessWidget
                       fontSize:25,fontWeight: FontWeight.w900,color: Colors.black
                   ),),),
 
-                SizedBox(height:30,),
+                SizedBox(height:20,),
                 ElevatedButton(onPressed: (){
                   Navigator.pushNamed(context,'/suggestion');
                 },
@@ -126,9 +138,9 @@ class SafeAlert extends StatelessWidget
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: 1,
           type: BottomNavigationBarType.fixed,
-          backgroundColor:Colors.amber,
-          selectedItemColor: Colors.white,
-          unselectedItemColor: Colors.black,
+          backgroundColor:colorgreen,
+          selectedItemColor: colorCyan,
+          unselectedItemColor:colorWhite,
           items:[
             BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
             BottomNavigationBarItem(icon: Icon(Icons.safety_check),label: "Safety"),

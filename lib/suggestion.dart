@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'Style/Style.dart';
+
 class SuggestionBox extends StatelessWidget
 {
   const SuggestionBox({super.key});
@@ -24,7 +26,7 @@ class SuggestionBox extends StatelessWidget
                   height: 200,
                   width: 370,
                   decoration: BoxDecoration(
-                    color: Color(0xFF00695C),
+                    color: colorgreen,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Column(
@@ -38,7 +40,7 @@ class SuggestionBox extends StatelessWidget
                       Colors.white,fontWeight: FontWeight.w500,fontSize: 16),),
                       SizedBox(height: 8,),
                       ElevatedButton(onPressed: (){},
-                        style: ElevatedButton.styleFrom(backgroundColor: Color(0xFFCDDC39)) ,
+                        style: ElevatedButton.styleFrom(backgroundColor:colorLime) ,
                         child:Text("Active SafeAlert",style: TextStyle(color:
                         Colors.black,fontWeight: FontWeight.w500,fontSize:22),),
                       )
@@ -96,7 +98,7 @@ class SuggestionBox extends StatelessWidget
 
                 ElevatedButton(onPressed: (){},
                   style:ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xFFCDDC39),minimumSize: Size(250, 40)
+                      backgroundColor: colorLime,minimumSize: Size(250, 40)
                   ) ,
                   child:Text("Submit",style: TextStyle(
                       fontSize:27,fontWeight: FontWeight.w900,color: Colors.black
@@ -111,7 +113,7 @@ class SuggestionBox extends StatelessWidget
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: 1,
           type: BottomNavigationBarType.fixed,
-          backgroundColor:Colors.amber,
+          backgroundColor:colorgreen,
           selectedItemColor: Colors.white,
           unselectedItemColor: Colors.black,
           items:[

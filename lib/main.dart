@@ -1,6 +1,7 @@
 import 'package:campus_helper/SafeAlert.dart';
 import 'package:flutter/material.dart';
 import 'package:campus_helper/ComplainBox.dart';
+import 'Style/Style.dart';
 import 'suggestion.dart';
 import 'StudyResources.dart';
 
@@ -40,7 +41,7 @@ class HomePage extends StatelessWidget
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("CampusBond",style: TextStyle(color: Colors.black,
+          title: Text("CAMPUS-BOND",style: TextStyle(color: Colors.black,
               fontWeight: FontWeight.w900,fontSize: 30
           ),),
           actions: [
@@ -59,7 +60,7 @@ class HomePage extends StatelessWidget
                 width: 370,
 
                 decoration: BoxDecoration(
-                    color: Color(0xFF00695C),
+                    color:colorgreen,
                     borderRadius: BorderRadius.circular(20)
                 ),
                 child: Row(
@@ -75,7 +76,7 @@ class HomePage extends StatelessWidget
                           //MyScafold(context,"This is Panic Button");
                         },
                           style:ElevatedButton.styleFrom(
-                              backgroundColor: Color(0xFFCDDC39),
+                              backgroundColor:colorLime,
                               minimumSize: Size(200, 25)
                           ) ,
                           child: Text("   Panic Button",style: TextStyle(color: Colors.white,
@@ -105,9 +106,8 @@ class HomePage extends StatelessWidget
                         Text("Ongoing Campus Event",style: TextStyle(color: Colors.black,
                             fontWeight: FontWeight.w700,fontSize: 20
                         ),),
-                        Text("Join us for the annual Tech Expo \n showcasing student projects and \n innovations.",style: TextStyle(color: Colors.black,
-                            fontWeight: FontWeight.w400,fontSize: 15
-                        ),),
+                        Text("Join us for the annual Tech Expo \n showcasing student projects and \n innovations.",
+                            style:textStyle(colorBlack,weight6,14.0)),
                       ],
                     ),
                   ),
@@ -130,9 +130,8 @@ class HomePage extends StatelessWidget
                         Text("Upcomming Campus Event",style: TextStyle(color: Colors.black,
                             fontWeight: FontWeight.w700,fontSize: 18
                         ),),
-                        Text("Join us for the annual Tech Expo \n showcasing student projects and \n innovations.",style: TextStyle(color: Colors.black,
-                            fontWeight: FontWeight.w400,fontSize: 15
-                        ),),
+                        Text("Join us for the annual Tech Expo \n showcasing student projects and \n innovations."
+                          ,style:textStyle(colorBlack,weight6,14.0)),
                       ],
                     ),
                   ),
@@ -143,15 +142,13 @@ class HomePage extends StatelessWidget
                 ],
               ),
               SizedBox(height: 5,),
-              Text("See more...",style: TextStyle(color: Colors.green,
-                  fontWeight: FontWeight.w400,fontSize: 20
-              ),),
+              Text("See more...",style:textStyle(Colors.green,weight6,24.0)),
               SizedBox(height: 5,),
               Container(
                 height: 180,
                 width: 350,
                 decoration: BoxDecoration(
-                    color: Color(0xFF00695C),
+                    color: colorgreen,
                     borderRadius: BorderRadius.circular(20)
                 ),
                 child: Row(
@@ -164,12 +161,10 @@ class HomePage extends StatelessWidget
                           Text(" Connect With Seniors\n Need Help?",style: TextStyle(color: Colors.white,
                               fontWeight: FontWeight.w700,fontSize: 16
                           ),),
-                          Text("Connect with senior students \n for guidance and support.",style: TextStyle(color: Colors.white,
-                              fontWeight: FontWeight.w400,fontSize: 12
-                          ),),
+                          Text("Connect with senior students \n for guidance and support.",style:textStyle(colorWhite,weight6,12.0)),
                           ElevatedButton(onPressed: (){},
                             style:ElevatedButton.styleFrom(
-                              fixedSize: Size(200,10),backgroundColor: Color(0xFFCDDC39),
+                              fixedSize: Size(200,10),backgroundColor:colorLime,
                             ) ,
                             child:Text("Post Help Questions",style: TextStyle(
                                 color: Colors.black,fontWeight: FontWeight.w700
@@ -186,9 +181,7 @@ class HomePage extends StatelessWidget
                 ),
               ),
               SizedBox(height: 7,),
-              Text(" Quick Links",style: TextStyle(color: Colors.black,
-                  fontWeight: FontWeight.w900,fontSize:20
-              ),),
+              Text(" Quick Links",style: textStyle(colorBlack,weight9,20.0)),
               SizedBox(height: 7,),
               Row(
                 children: [
@@ -198,26 +191,22 @@ class HomePage extends StatelessWidget
                         Navigator.pushNamed(context, '/StudyResources');
                       },
                         style:ElevatedButton.styleFrom(
-                          fixedSize: Size(180,25),backgroundColor: Color(0xFFCDDC39),
+                          fixedSize: Size(180,25),backgroundColor: colorLime,
                         ) ,
                         child:Row(
                           children: [
                             Icon(Icons.book_sharp),
-                            Text("Study resources",style: TextStyle(
-                                color: Colors.black,fontWeight: FontWeight.w700
-                            ),),
+                            Text("Study resources",style:textStyle(colorBlack,weight6,13.0)),
                           ],
                         ),),
                       ElevatedButton(onPressed: (){},
                         style:ElevatedButton.styleFrom(
-                          fixedSize: Size(180,25),backgroundColor: Color(0xFFCDDC39),
+                          fixedSize: Size(180,25),backgroundColor: colorLime,
                         ) ,
                         child:Row(
                           children: [
                             Icon(Icons.bloodtype),
-                            Text("Blood Group Finder",style: TextStyle(
-                                color: Colors.black,fontWeight: FontWeight.w700,fontSize: 12
-                            ),),
+                            Text("Blood Group Finder",style:textStyle(colorBlack,weight6,12.0)),
                           ],
                         ),),
                     ],
@@ -227,26 +216,23 @@ class HomePage extends StatelessWidget
                     children: [
                       ElevatedButton(onPressed: (){},
                         style:ElevatedButton.styleFrom(
-                          fixedSize: Size(180,25),backgroundColor: Color(0xFFCDDC39),
+                          fixedSize: Size(180,25),backgroundColor: colorLime,
                         ) ,
                         child:Row(
                           children: [
                             Icon(Icons.location_on_sharp),
-                            Text("Campus Guide",style: TextStyle(
-                                color: Colors.black,fontWeight: FontWeight.w700
-                            ),),
+                            Text("Campus Guide",style:textStyle(colorBlack,weight6,13.0)),
                           ],
                         ),),
                       ElevatedButton(onPressed: (){},
                         style:ElevatedButton.styleFrom(
-                          fixedSize: Size(180,25),backgroundColor: Color(0xFFCDDC39),
+                          fixedSize: Size(180,25),backgroundColor: colorLime,
                         ) ,
                         child:Row(
                           children: [
                             Icon(Icons.school),
-                            Text("Teachers Panel",style: TextStyle(
-                                color: Colors.black,fontWeight: FontWeight.w700
-                            ),),
+                            Text("Teachers Panel",
+                                style:textStyle(colorBlack,weight6,13.0)),
                           ],
                         ),),
                     ],
@@ -262,9 +248,9 @@ class HomePage extends StatelessWidget
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: 0,
           type: BottomNavigationBarType.fixed,
-          backgroundColor:Colors.amber,
-          selectedItemColor: Colors.white,
-          unselectedItemColor: Colors.black,
+          backgroundColor:colorgreen,
+          selectedItemColor: colorCyan,
+          unselectedItemColor: colorWhite,
           items:[
             BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
             BottomNavigationBarItem(icon: Icon(Icons.safety_check),label: "Safety"),
