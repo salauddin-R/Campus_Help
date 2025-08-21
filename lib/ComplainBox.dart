@@ -114,8 +114,8 @@ class complainBox extends StatelessWidget
           currentIndex: 1,
           type: BottomNavigationBarType.fixed,
           backgroundColor:colorgreen,
-          selectedItemColor: Colors.white,
-          unselectedItemColor: Colors.black,
+          selectedItemColor: colorCyan,
+          unselectedItemColor: colorWhite,
           items:[
             BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
             BottomNavigationBarItem(icon: Icon(Icons.safety_check),label: "Safety"),

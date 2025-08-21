@@ -8,7 +8,7 @@ const Color colorWhite=Colors.white;
 const Color colorCyan=Colors.cyanAccent;
 FontWeight weight9=FontWeight.w900;
 FontWeight weight6=FontWeight.w700;
-FontWeight weight4=FontWeight.w700;
+FontWeight weight4=FontWeight.w500;
 
 TextStyle textStyle(color,weight,size){
   return TextStyle(color: color,

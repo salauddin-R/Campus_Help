@@ -1,6 +1,7 @@
 import 'package:campus_helper/SafeAlert.dart';
 import 'package:flutter/material.dart';
 import 'package:campus_helper/ComplainBox.dart';
+import 'Blood/BloodPortion.dart';
 import 'Style/Style.dart';
 import 'suggestion.dart';
 import 'StudyResources.dart';
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget
         '/ComplainBox':(context)=>complainBox(),
         '/suggestion':(context)=>SuggestionBox(),
         '/StudyResources':(context)=>StudyResources(),
+        '/BloodPortion':(context)=>BloodPortion(),
       },
     );
   }
@@ -199,7 +201,10 @@ class HomePage extends StatelessWidget
                             Text("Study resources",style:textStyle(colorBlack,weight6,13.0)),
                           ],
                         ),),
-                      ElevatedButton(onPressed: (){},
+                      ElevatedButton(onPressed: (){
+                        Navigator.pushNamed(context, '/BloodPortion');
+
+                      },
                         style:ElevatedButton.styleFrom(
                           fixedSize: Size(180,25),backgroundColor: colorLime,
                         ) ,
