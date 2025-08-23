@@ -1,4 +1,5 @@
 import 'package:campus_helper/SafeAlert.dart';
+import 'package:campus_helper/Skill/skill_List.dart';
 import 'package:flutter/material.dart';
 import 'package:campus_helper/ComplainBox.dart';
 import 'Blood/BloodPortion.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget
         '/suggestion':(context)=>SuggestionBox(),
         '/StudyResources':(context)=>StudyResources(),
         '/BloodPortion':(context)=>BloodPortion(),
+        '/skillShare':(context)=>skillShare(),
       },
     );
   }
@@ -334,7 +336,7 @@ class HomePage extends StatelessWidget
                          )),
                   GestureDetector(
                       onTap: () {
-                      print("Campus Guide tapped");
+                      Navigator.pushNamed(context, '/skillShare');
                        },  
                    child:Container(
                     width: 80,
