@@ -1,12 +1,18 @@
+import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
 import 'Style/Style.dart';
-import 'main.dart';
+
 
 class SafeAlert extends StatelessWidget
 {
   const SafeAlert({super.key});
 
-
+  void _callPhone(String phoneNumber) async {
+    final Uri url = Uri(scheme: 'tel', path: phoneNumber);
+    if (!await launchUrl(url)) {
+      print('Could not launch $url');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,6 +55,28 @@ class SafeAlert extends StatelessWidget
                     ],
                   ),
                 ),
+                SizedBox(height:25,),
+                Container(
+                  height: 70,
+                  width: 350,
+                  color: colorgreen,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Icon(Icons.location_on,size: 37,),
+                      Column(
+                        children: [
+                          Text("Campus Security",style:textStyle(colorWhite,weight9,21.0)),
+                          Text("Contact:09134909408",style:textStyle(colorWhite,weight9,22.0)),
+                        ],
+                      ),
+                      IconButton(onPressed:(){
+                        _callPhone("09134909408");
+                      }
+                          , icon: Icon(Icons.call,size: 35,color: colorLime,))
+                    ],
+                  ),
+                ),
                 SizedBox(height: 50,),
                 Text("Nearest Thana",style: TextStyle(color:
                 Colors.black,fontWeight: FontWeight.w900,fontSize:26),),
@@ -67,7 +95,10 @@ class SafeAlert extends StatelessWidget
                           Text("Contact:09134909408",style:textStyle(colorWhite,weight9,22.0)),
                         ],
                       ),
-                      Icon(Icons.call_made_outlined,size: 37,)
+                      IconButton(onPressed:(){
+                        _callPhone("09134909408");
+                      }
+                          , icon: Icon(Icons.call,size: 35,color: colorLime,))
                     ],
                   ),
                 ),
@@ -82,33 +113,18 @@ class SafeAlert extends StatelessWidget
                       Icon(Icons.location_on,size: 37,),
                       Column(
                         children: [
-                          Text("Dakshinkhan Police Station",style:textStyle(colorWhite,weight9,21.0)),
-                          Text("Contact:09134909408",style:textStyle(colorWhite,weight9,22.0)),
+                          Text("Dakshinkhan Police Station",style:textStyle(colorWhite,weight9,20.0)),
+                          Text("Contact:09134909408",style:textStyle(colorWhite,weight9,20.0)),
                         ],
                       ),
-                      Icon(Icons.call_made_outlined,size: 37,)
+                      IconButton(onPressed:(){
+                        _callPhone("09134909408");
+                      }
+                          , icon: Icon(Icons.call,size: 35,color: colorLime,))
                     ],
                   ),
                 ),
-                SizedBox(height:50,),
-                Container(
-                  height: 70,
-                  width: 350,
-                  color: colorgreen,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Icon(Icons.location_on,size: 37,),
-                      Column(
-                        children: [
-                          Text("Campus Security",style:textStyle(colorWhite,weight9,21.0)),
-                          Text("Contact:09134909408",style:textStyle(colorWhite,weight9,22.0)),
-                        ],
-                      ),
-                      Icon(Icons.call_made_outlined,size: 37,)
-                    ],
-                  ),
-                ),
+
                 SizedBox(height:30,),
                 ElevatedButton(onPressed: (){
                   Navigator.pushNamed(context, '/ComplainBox');

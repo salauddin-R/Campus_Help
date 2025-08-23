@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 import '../Style/Style.dart';
 
 
@@ -20,7 +19,7 @@ class BloodgruopDetails extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("Blood Group List",style: TextStyle(color:
+        title: Text("Blood Group Details",style: TextStyle(color:
         Colors.black,fontWeight: FontWeight.w900,fontSize: 32),),
       ),
 

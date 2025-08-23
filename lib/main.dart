@@ -43,208 +43,404 @@ class HomePage extends StatelessWidget
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("CAMPUS-BOND",style: TextStyle(color: Colors.black,
-              fontWeight: FontWeight.w900,fontSize: 30
-          ),),
+          toolbarHeight: 50,
+          backgroundColor: colorPink,
+          title: Column(
+            children: [
+              Text("CAMPUS-BOND",style:textStyle(colorWhite,weight6,24.0)),
+              Text("Connect.Learn.Safe",style: textStyle(colorWhite,weight4,12.0),)
+            ],
+          ),
           actions: [
-            Icon(Icons.settings,color: Colors.black,size: 30,),
+            Icon(Icons.notifications,color: colorWhite,size: 30),
+            SizedBox(width: 14,),
+            Icon(Icons.settings,color: colorWhite,size: 30),
             SizedBox(width: 20,),
           ],
         ),
 
 
         body: Padding(
-          padding:EdgeInsets.only(right: 25,left: 25,),
+          padding:EdgeInsets.only(right: 23,left: 27,top:5),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                height: 84,
+                height: 212,
                 width: 370,
 
                 decoration: BoxDecoration(
-                    color:colorgreen,
+                    color:colorRed,
                     borderRadius: BorderRadius.circular(20)
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Column(
-                      children: [
-                        Text("   Safe Alert",style: TextStyle(color: Colors.white,
-                            fontWeight: FontWeight.w900,fontSize: 25
-                        ),),
-                        ElevatedButton(onPressed:(){
-                          Navigator.pushNamed(context,'/SafeAlert');
-                          //MyScafold(context,"This is Panic Button");
-                        },
-                          style:ElevatedButton.styleFrom(
-                              backgroundColor:colorLime,
-                              minimumSize: Size(200, 25)
-                          ) ,
-                          child: Text("   Panic Button",style: TextStyle(color: Colors.white,
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 22,top: 10,left: 30,bottom: 10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        flex: 35,
+                        child: Column(
+                          children: [
+                            Text("   Safe Alert",style: TextStyle(color: Colors.white,
+                                fontWeight: FontWeight.w900,fontSize: 25
+                            ),),
+                            Row(
+                              children: [
+                                Container(
+                                   height: 41,
+                                     width: 41,
 
-                              fontWeight: FontWeight.w900,fontSize: 16
-                          ),),)
-
-
-                      ],
-                    ),
-                    Image(image: AssetImage("assets/images/Natification.png"),fit: BoxFit.fill,),
-                  ],
+                                       decoration: BoxDecoration(
+                                          color:colorDarkWhite,
+                                          borderRadius: BorderRadius.circular(10)
+                                        ),
+                                        child: Icon(Icons.verified_user),
+                                ),
+                                SizedBox(width: 5,),
+                                Text("Emergency\nassistance ready",
+                                style:textStyle(colorWhite,weight4,14.0) ,),
+                              ],
+                            ),
+                            SizedBox(height: 9,),
+                            Row(
+                              children: [
+                               CircleAvatar(
+                          backgroundColor: colorgreen,
+                          radius: 5,
+                        ),
+                        SizedBox(width: 5,),
+                                Text("Campus Security Online",
+                                style:textStyle(colorWhite,weight4,14.0) ,),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                               CircleAvatar(
+                          backgroundColor: colorLime,
+                          radius: 5,
+                        ),
+                        SizedBox(width: 5,),
+                                Text("Emergency Services Active",
+                                style:textStyle(colorWhite,weight4,14.0) ,),
+                              ],
+                            ),
+                            SizedBox(height: 12,),
+                            ElevatedButton(onPressed:(){
+                              Navigator.pushNamed(context,'/SafeAlert');
+                              //MyScafold(context,"This is Panic Button");
+                            },
+                              style:ElevatedButton.styleFrom(
+                                  backgroundColor:colorPora,
+                                  minimumSize: Size(50, 25)
+                              ) ,
+                              child: Text("  Panic\n  Button",style: TextStyle(color:colorBlack,
+                        
+                                  fontWeight: FontWeight.w900,fontSize: 16
+                              ),),)
+                        
+                        
+                          ],
+                        ),
+                      ),
+                      Expanded(
+                        flex: 20,
+                        child: CircleAvatar(
+                          backgroundColor: colorPora,
+                          radius: 25,
+                          child: Icon(Icons.warning_amber_sharp,color: colorBlack,size: 34,),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               // SizedBox(height:5,),
-              Text("Notice/Event Board",style: TextStyle(color: Colors.black,
-                  fontWeight: FontWeight.w900,fontSize: 25
-              ),),
-              SizedBox(height:7,),
-              Row(
+              Row( 
                 children: [
-                  SizedBox(
-                    height:97 ,
-                    width: 249,
-                    child: Column(
+                  Expanded(
+                    flex: 80,
+                    child:Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Ongoing Campus Event",style: TextStyle(color: Colors.black,
-                            fontWeight: FontWeight.w700,fontSize: 20
-                        ),),
-                        Text("Join us for the annual Tech Expo \n showcasing student projects and \n innovations.",
-                            style:textStyle(colorBlack,weight6,14.0)),
+                        Text("  Event Hub",style: textStyle(colorBlack,weight6,15.0),),
+                        Text("  Stay updated with campus happenings",style:textStyle(colorBlack,weight4,13.0))
                       ],
+                    )
                     ),
-                  ),
-                  SizedBox(height: 97,
-                    width:110 ,
-                    child: Image(image: AssetImage('assets/images/Evemt.png'),fit: BoxFit.fill,),
-                  )
+                  Expanded(
+                    flex: 20,
+                    child:SizedBox(height: 15,width: 15,child: 
+                    Icon(Icons.email_rounded,color: colorPink,),)
+                    ),
                 ],
               ),
+              SizedBox(height:5,),
 
-              SizedBox(height: 20,),
-
-              Row(
-                children: [
-                  SizedBox(
-                    height:97 ,
-                    width: 249,
-                    child: Column(
-                      children: [
-                        Text("Upcomming Campus Event",style: TextStyle(color: Colors.black,
-                            fontWeight: FontWeight.w700,fontSize: 18
-                        ),),
-                        Text("Join us for the annual Tech Expo \n showcasing student projects and \n innovations."
-                          ,style:textStyle(colorBlack,weight6,14.0)),
-                      ],
-                    ),
+            Container(
+              height: 137,
+              width: 362,
+              decoration: BoxDecoration(
+                  color:colorWhiteLight,
+                  borderRadius: BorderRadius.circular(20),),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SizedBox(height: 5,),
+             Container(
+              height: 27,
+              width: 204,
+              decoration: BoxDecoration(
+                  color:colorBaguni,
+                  borderRadius: BorderRadius.circular(20),),
+                  child:Center(child: Text("Technology",style:textStyle(colorBlack,weight6,17.0) ,))
                   ),
-                  SizedBox(height: 97,
-                    width:110 ,
-                    child: Image(image: AssetImage('assets/images/Evemt.png'),fit: BoxFit.fill,),
-                  )
-                ],
-              ),
-              SizedBox(height: 5,),
-              Text("See more...",style:textStyle(Colors.green,weight6,24.0)),
-              SizedBox(height: 5,),
-              Container(
-                height: 180,
-                width: 350,
-                decoration: BoxDecoration(
-                    color: colorgreen,
-                    borderRadius: BorderRadius.circular(20)
-                ),
-                child: Row(
-                  children: [
-                    SizedBox(
-                      height: 128,
-                      width: 205,
-                      child: Column(
+                  SizedBox(height: 5,),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(" Connect With Seniors\n Need Help?",style: TextStyle(color: Colors.white,
-                              fontWeight: FontWeight.w700,fontSize: 16
-                          ),),
-                          Text("Connect with senior students \n for guidance and support.",style:textStyle(colorWhite,weight6,12.0)),
-                          ElevatedButton(onPressed: (){},
-                            style:ElevatedButton.styleFrom(
-                              fixedSize: Size(200,10),backgroundColor:colorLime,
-                            ) ,
-                            child:Text("Post Help Questions",style: TextStyle(
-                                color: Colors.black,fontWeight: FontWeight.w700
-                            ),),),
+                          Container(
+              height: 60,
+              width: 80,
+              decoration: BoxDecoration(
+                  color:colorWhiteLight,
+                  borderRadius: BorderRadius.circular(5),), 
+                  child: Image.asset("assets/images/dark.png",fit: BoxFit.cover,),
+                          ),
+                          SizedBox(width: 10,),
+                          Text("Join us for the annual Tech Expo \nshowcasing student projects and innovation",
+                          style:textStyle(colorBlack,weight4,12.0),)
                         ],
                       ),
-                    ),
-                    SizedBox(
-                      height: 130,
-                      width:140 ,
-                      child: Image(image: AssetImage("assets/images/Sela.png"),fit: BoxFit.fill,),
-                    )
-                  ],
-                ),
-              ),
-              SizedBox(height: 7,),
-              Text(" Quick Links",style: textStyle(colorBlack,weight9,20.0)),
-              SizedBox(height: 7,),
+                                            Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.alarm),
+                          Text("  Tomorrow,5pm",
+                          style:textStyle(colorBlack,weight4,10.0),),
+                          SizedBox(width: 55,),
+                          Icon(Icons.group),
+                          Text("  300+ registered",
+                          style:textStyle(colorBlack,weight4,10.0),),
+                        ],
+                      ),
+                      Text("Learn more....",
+                          style:textStyle(Color(0xFF5C4FFD),weight4,10.0),),
+ 
+                    ],
+                  ),
+                  ),
+                  SizedBox(height:5,),
+            Container(
+              height: 137,
+              width: 362,
+              decoration: BoxDecoration(
+                  color:colorWhiteLight,
+                  borderRadius: BorderRadius.circular(20),),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SizedBox(height: 5,),
+             Container(
+              height: 27,
+              width: 204,
+              decoration: BoxDecoration(
+                  color:colorBaguni,
+                  borderRadius: BorderRadius.circular(20),),
+                  child:Center(child: Text("Technology",style:textStyle(colorBlack,weight6,17.0) ,))
+                  ),
+                  SizedBox(height: 5,),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+              height: 60,
+              width: 80,
+              decoration: BoxDecoration(
+                  color:colorWhiteLight,
+                  borderRadius: BorderRadius.circular(5),), 
+                  child: Image.asset("assets/images/light.png",fit: BoxFit.cover,),
+                          ),
+                          SizedBox(width: 10,),
+                          Text("Join us for the annual Tech Expo \nshowcasing student projects and innovation",
+                          style:textStyle(colorBlack,weight4,12.0),)
+                        ],
+                      ),
+                                            Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.alarm),
+                          Text("  Tomorrow,5pm",
+                          style:textStyle(colorBlack,weight4,10.0),),
+                          SizedBox(width: 55,),
+                          Icon(Icons.group),
+                          Text("  300+ registered",
+                          style:textStyle(colorBlack,weight4,10.0),),
+                        ],
+                      ),
+                      Text("Learn more....",
+                          style:textStyle(Color(0xFF5C4FFD),weight4,10.0),),
+ 
+                    ],
+                  ),
+                  ),
+  
+             SizedBox(height:5,),
+             
+             Container(
+              height: 35,
+              width: 362,
+              decoration: BoxDecoration(
+                  color:colorPink,
+                  borderRadius: BorderRadius.circular(20),),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.calendar_month,color: colorBlack,),
+                      SizedBox(width: 10,),
+                      Text("View All Events",style:textStyle(colorWhite,weight6,17.0),)
+                    ],
+                  ),
+                  ),
+ 
+              SizedBox(height:5,),
+              Text("   Quick Access",style: textStyle(colorBlack,weight6,15.0)),
+              SizedBox(height: 5,),
+
+
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Column(
-                    children: [
-                      ElevatedButton(onPressed: (){
-                        Navigator.pushNamed(context, '/StudyResources');
-                      },
-                        style:ElevatedButton.styleFrom(
-                          fixedSize: Size(180,25),backgroundColor: colorLime,
-                        ) ,
-                        child:Row(
-                          children: [
-                            Icon(Icons.book_sharp),
-                            Text("Study resources",style:textStyle(colorBlack,weight6,13.0)),
-                          ],
-                        ),),
-                      ElevatedButton(onPressed: (){
-                        Navigator.pushNamed(context, '/BloodPortion');
-
-                      },
-                        style:ElevatedButton.styleFrom(
-                          fixedSize: Size(180,25),backgroundColor: colorLime,
-                        ) ,
-                        child:Row(
-                          children: [
-                            Icon(Icons.bloodtype),
-                            Text("Blood Group Finder",style:textStyle(colorBlack,weight6,12.0)),
-                          ],
-                        ),),
-                    ],
-                  ),
-
-                  Column(
-                    children: [
-                      ElevatedButton(onPressed: (){},
-                        style:ElevatedButton.styleFrom(
-                          fixedSize: Size(180,25),backgroundColor: colorLime,
-                        ) ,
-                        child:Row(
-                          children: [
-                            Icon(Icons.location_on_sharp),
-                            Text("Campus Guide",style:textStyle(colorBlack,weight6,13.0)),
-                          ],
-                        ),),
-                      ElevatedButton(onPressed: (){},
-                        style:ElevatedButton.styleFrom(
-                          fixedSize: Size(180,25),backgroundColor: colorLime,
-                        ) ,
-                        child:Row(
-                          children: [
-                            Icon(Icons.school),
-                            Text("Teachers Panel",
-                                style:textStyle(colorBlack,weight6,13.0)),
-                          ],
-                        ),),
-                    ],
-                  ),
+                  GestureDetector(
+                      onTap: () {
+                     Navigator.pushNamed(context, '/StudyResources');
+                       },  
+                   child:Container(
+                    width: 80,
+                    height: 66,
+                    decoration: BoxDecoration(
+                      color: colorWhiteLight,
+                  borderRadius: BorderRadius.circular(15),
+                           ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Icon(Icons.menu_book,color:Colors.deepPurple,),
+                              Text("    Study\n Resources",style: textStyle(colorBlack,weight4,13.0)),
+                            ],
+                          )
+                         )),
+                  GestureDetector(
+                      onTap: () {
+                      print("Campus Guide tapped");
+                       },  
+                   child:Container(
+                    width: 80,
+                    height: 66,
+                    decoration: BoxDecoration(
+                      color: colorWhiteLight,
+                  borderRadius: BorderRadius.circular(15),
+                           ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Icon(Icons.psychology,color:colorPink,),
+                              Text("Skill Share",style: textStyle(colorBlack,weight4,13.0)),
+                            ],
+                          )
+                         )),
+                    GestureDetector(
+                      onTap: () {
+                      Navigator.pushNamed(context, '/BloodPortion');
+                       },  
+                   child:Container(
+                    width: 80,
+                    height: 66,
+                    decoration: BoxDecoration(
+                      color: colorWhiteLight,
+                  borderRadius: BorderRadius.circular(15),
+                           ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Icon(Icons.favorite,color:colorRed,),
+                              Text("Blood Group\n      Finder",style: textStyle(colorBlack,weight4,13.0)),
+                            ],
+                          )
+                         )),
                 ],
-              )
+              ),
+          SizedBox(height: 5,),
 
+           Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  GestureDetector(
+                      onTap: () {
+                      print("Campus Guide tapped");
+                       },  
+                   child:Container(
+                    width: 80,
+                    height: 66,
+                    decoration: BoxDecoration(
+                      color: colorWhiteLight,
+                  borderRadius: BorderRadius.circular(15),
+                           ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Icon(Icons.dashboard_customize,color:colorPink,),
+                              Text(" Teachers\n   Panel",style: textStyle(colorBlack,weight4,13.0)),
+                            ],
+                          )
+                        )),
+                    GestureDetector(
+                      onTap: () {
+                      print("Campus Guide tapped");
+                       },  
+                   child:Container(
+                    width: 80,
+                    height: 66,
+                    decoration: BoxDecoration(
+                      color: colorWhiteLight,
+                  borderRadius: BorderRadius.circular(15),
+                           ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Icon(Icons.link,color:colorPora,),
+                              Text("Connect with\n    Seniors",style: textStyle(colorBlack,weight4,13.0)),
+                            ],
+                          )
+                       ) ),
+                GestureDetector(
+                      onTap: () {
+                      print("Campus Guide tapped");
+                       },  
+                   child:Container(
+                    width: 80,
+                    height: 66,
+                    decoration: BoxDecoration(
+                      color: colorWhiteLight,
+                  borderRadius: BorderRadius.circular(15),
+                           ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Icon(Icons.location_on,color:Colors.green,),
+                              Text("  Campus\n    Guide",style: textStyle(colorBlack,weight4,13.0)),
+                            ],
+                          )
+                           ),),
+                ],
+              ),
             ],
           ),
 
@@ -253,9 +449,9 @@ class HomePage extends StatelessWidget
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: 0,
           type: BottomNavigationBarType.fixed,
-          backgroundColor:colorgreen,
-          selectedItemColor: colorCyan,
-          unselectedItemColor: colorWhite,
+          backgroundColor:colorDarkWhite,
+          selectedItemColor: colorgreen,
+          unselectedItemColor: colorBlack,
           items:[
             BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
             BottomNavigationBarItem(icon: Icon(Icons.safety_check),label: "Safety"),
